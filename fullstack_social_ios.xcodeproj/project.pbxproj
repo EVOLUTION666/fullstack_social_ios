@@ -3,27 +3,33 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C18783DC5F81CF7AB98FE89 /* Pods_fullstack_social_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C03B0DACBC4095A274C96BE5 /* Pods_fullstack_social_ios.framework */; };
 		55418A7F26DA42C7000AD058 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A7E26DA42C7000AD058 /* AppDelegate.swift */; };
 		55418A8126DA42C7000AD058 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A8026DA42C7000AD058 /* SceneDelegate.swift */; };
-		55418A8326DA42C7000AD058 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A8226DA42C7000AD058 /* ViewController.swift */; };
+		55418A8326DA42C7000AD058 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A8226DA42C7000AD058 /* HomeController.swift */; };
 		55418A8626DA42C7000AD058 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8426DA42C7000AD058 /* Main.storyboard */; };
 		55418A8826DA42C8000AD058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8726DA42C8000AD058 /* Assets.xcassets */; };
 		55418A8B26DA42C8000AD058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8926DA42C8000AD058 /* LaunchScreen.storyboard */; };
+		55418A9D26DA8857000AD058 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A9C26DA8857000AD058 /* LoginController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		55418A7B26DA42C7000AD058 /* fullstack_social_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fullstack_social_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55418A7E26DA42C7000AD058 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55418A8026DA42C7000AD058 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55418A8226DA42C7000AD058 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55418A8226DA42C7000AD058 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		55418A8526DA42C7000AD058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55418A8726DA42C8000AD058 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55418A8A26DA42C8000AD058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55418A8C26DA42C8000AD058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55418A9C26DA8857000AD058 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		ACBE10359E33F6C51A13AE8D /* Pods-fullstack_social_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.release.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.release.xcconfig"; sourceTree = "<group>"; };
+		C03B0DACBC4095A274C96BE5 /* Pods_fullstack_social_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fullstack_social_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDD511968D4EF61C537AE0BC /* Pods-fullstack_social_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.debug.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C18783DC5F81CF7AB98FE89 /* Pods_fullstack_social_ios.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42C52857A24C3734CFB33371 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDD511968D4EF61C537AE0BC /* Pods-fullstack_social_ios.debug.xcconfig */,
+				ACBE10359E33F6C51A13AE8D /* Pods-fullstack_social_ios.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		55418A7226DA42C6000AD058 = {
 			isa = PBXGroup;
 			children = (
 				55418A7D26DA42C7000AD058 /* fullstack_social_ios */,
 				55418A7C26DA42C7000AD058 /* Products */,
+				42C52857A24C3734CFB33371 /* Pods */,
+				79206A4990A231DE617D85EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +76,22 @@
 			children = (
 				55418A7E26DA42C7000AD058 /* AppDelegate.swift */,
 				55418A8026DA42C7000AD058 /* SceneDelegate.swift */,
-				55418A8226DA42C7000AD058 /* ViewController.swift */,
+				55418A8226DA42C7000AD058 /* HomeController.swift */,
 				55418A8426DA42C7000AD058 /* Main.storyboard */,
 				55418A8726DA42C8000AD058 /* Assets.xcassets */,
 				55418A8926DA42C8000AD058 /* LaunchScreen.storyboard */,
 				55418A8C26DA42C8000AD058 /* Info.plist */,
+				55418A9C26DA8857000AD058 /* LoginController.swift */,
 			);
 			path = fullstack_social_ios;
+			sourceTree = "<group>";
+		};
+		79206A4990A231DE617D85EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C03B0DACBC4095A274C96BE5 /* Pods_fullstack_social_ios.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 55418A8F26DA42C8000AD058 /* Build configuration list for PBXNativeTarget "fullstack_social_ios" */;
 			buildPhases = (
+				4BC57AF9247F5CD3029EB9C0 /* [CP] Check Pods Manifest.lock */,
 				55418A7726DA42C7000AD058 /* Sources */,
 				55418A7826DA42C7000AD058 /* Frameworks */,
 				55418A7926DA42C7000AD058 /* Resources */,
+				E6A88F77C63A3601D6D64625 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,12 +161,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4BC57AF9247F5CD3029EB9C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-fullstack_social_ios-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E6A88F77C63A3601D6D64625 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		55418A7726DA42C7000AD058 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55418A8326DA42C7000AD058 /* ViewController.swift in Sources */,
+				55418A8326DA42C7000AD058 /* HomeController.swift in Sources */,
+				55418A9D26DA8857000AD058 /* LoginController.swift in Sources */,
 				55418A7F26DA42C7000AD058 /* AppDelegate.swift in Sources */,
 				55418A8126DA42C7000AD058 /* SceneDelegate.swift in Sources */,
 			);
@@ -283,12 +355,14 @@
 		};
 		55418A9026DA42C8000AD058 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDD511968D4EF61C537AE0BC /* Pods-fullstack_social_ios.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MQF3GGWS3;
 				INFOPLIST_FILE = fullstack_social_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +376,14 @@
 		};
 		55418A9126DA42C8000AD058 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACBE10359E33F6C51A13AE8D /* Pods-fullstack_social_ios.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7MQF3GGWS3;
 				INFOPLIST_FILE = fullstack_social_ios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
