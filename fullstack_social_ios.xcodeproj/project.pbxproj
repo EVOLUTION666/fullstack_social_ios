@@ -15,6 +15,7 @@
 		55418A8826DA42C8000AD058 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8726DA42C8000AD058 /* Assets.xcassets */; };
 		55418A8B26DA42C8000AD058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8926DA42C8000AD058 /* LaunchScreen.storyboard */; };
 		55418A9D26DA8857000AD058 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A9C26DA8857000AD058 /* LoginController.swift */; };
+		55418AA426DEB5BC000AD058 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418AA326DEB5BC000AD058 /* RegisterController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		55418A8A26DA42C8000AD058 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55418A8C26DA42C8000AD058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55418A9C26DA8857000AD058 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		55418AA326DEB5BC000AD058 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		ACBE10359E33F6C51A13AE8D /* Pods-fullstack_social_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.release.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.release.xcconfig"; sourceTree = "<group>"; };
 		C03B0DACBC4095A274C96BE5 /* Pods_fullstack_social_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fullstack_social_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD511968D4EF61C537AE0BC /* Pods-fullstack_social_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.debug.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -74,16 +76,49 @@
 		55418A7D26DA42C7000AD058 /* fullstack_social_ios */ = {
 			isa = PBXGroup;
 			children = (
+				55418A9F26DEB4D9000AD058 /* API */,
+				55418AA026DEB4E1000AD058 /* Models */,
+				55418AA126DEB4EA000AD058 /* Views */,
+				55418AA226DEB4F3000AD058 /* Controllers */,
 				55418A7E26DA42C7000AD058 /* AppDelegate.swift */,
 				55418A8026DA42C7000AD058 /* SceneDelegate.swift */,
-				55418A8226DA42C7000AD058 /* HomeController.swift */,
 				55418A8426DA42C7000AD058 /* Main.storyboard */,
 				55418A8726DA42C8000AD058 /* Assets.xcassets */,
 				55418A8926DA42C8000AD058 /* LaunchScreen.storyboard */,
 				55418A8C26DA42C8000AD058 /* Info.plist */,
-				55418A9C26DA8857000AD058 /* LoginController.swift */,
 			);
 			path = fullstack_social_ios;
+			sourceTree = "<group>";
+		};
+		55418A9F26DEB4D9000AD058 /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		55418AA026DEB4E1000AD058 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		55418AA126DEB4EA000AD058 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55418AA226DEB4F3000AD058 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55418A8226DA42C7000AD058 /* HomeController.swift */,
+				55418A9C26DA8857000AD058 /* LoginController.swift */,
+				55418AA326DEB5BC000AD058 /* RegisterController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		79206A4990A231DE617D85EA /* Frameworks */ = {
@@ -208,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55418AA426DEB5BC000AD058 /* RegisterController.swift in Sources */,
 				55418A8326DA42C7000AD058 /* HomeController.swift in Sources */,
 				55418A9D26DA8857000AD058 /* LoginController.swift in Sources */,
 				55418A7F26DA42C7000AD058 /* AppDelegate.swift in Sources */,

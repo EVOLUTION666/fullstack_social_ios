@@ -43,7 +43,8 @@ class LoginController: LBTAFormController {
                                            target: self,
                                            action: #selector(goToRegister))
     @objc fileprivate func goToRegister() {
-        
+        let controller = RegisterController(alignment: .center)
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc fileprivate func handleLogin() {
