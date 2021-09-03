@@ -16,6 +16,8 @@
 		55418A8B26DA42C8000AD058 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55418A8926DA42C8000AD058 /* LaunchScreen.storyboard */; };
 		55418A9D26DA8857000AD058 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418A9C26DA8857000AD058 /* LoginController.swift */; };
 		55418AA426DEB5BC000AD058 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418AA326DEB5BC000AD058 /* RegisterController.swift */; };
+		55418AA726DFBCC8000AD058 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418AA626DFBCC8000AD058 /* Post.swift */; };
+		55418AAA26DFBD32000AD058 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55418AA926DFBD32000AD058 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		55418A8C26DA42C8000AD058 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55418A9C26DA8857000AD058 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		55418AA326DEB5BC000AD058 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		55418AA626DFBCC8000AD058 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		55418AA926DFBD32000AD058 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		ACBE10359E33F6C51A13AE8D /* Pods-fullstack_social_ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.release.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.release.xcconfig"; sourceTree = "<group>"; };
 		C03B0DACBC4095A274C96BE5 /* Pods_fullstack_social_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_fullstack_social_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDD511968D4EF61C537AE0BC /* Pods-fullstack_social_ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-fullstack_social_ios.debug.xcconfig"; path = "Target Support Files/Pods-fullstack_social_ios/Pods-fullstack_social_ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,6 +97,7 @@
 		55418A9F26DEB4D9000AD058 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				55418AA926DFBD32000AD058 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -100,6 +105,7 @@
 		55418AA026DEB4E1000AD058 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				55418AA626DFBCC8000AD058 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,8 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55418AA426DEB5BC000AD058 /* RegisterController.swift in Sources */,
+				55418AAA26DFBD32000AD058 /* Service.swift in Sources */,
 				55418A8326DA42C7000AD058 /* HomeController.swift in Sources */,
 				55418A9D26DA8857000AD058 /* LoginController.swift in Sources */,
+				55418AA726DFBCC8000AD058 /* Post.swift in Sources */,
 				55418A7F26DA42C7000AD058 /* AppDelegate.swift in Sources */,
 				55418A8126DA42C7000AD058 /* SceneDelegate.swift in Sources */,
 			);

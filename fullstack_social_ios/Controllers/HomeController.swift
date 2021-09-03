@@ -8,35 +8,67 @@
 import LBTATools
 import WebKit
 import Alamofire
+import SDWebImage
 
-struct Post: Decodable {
-    let id: String
-    let text: String
-    let createdAt: Int
-    let user: User
-}
-
-struct User: Decodable {
-    let id: String
-    let fullName: String
-}
-
-class HomeController: UITableViewController {
+class HomeController: UITableViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    // Terminal run ifconfig
+    // 192.168.2.183
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showCookies()
+        navigationItem.rightBarButtonItems = [
+            .init(title: "Fetch posts", style: .plain, target: self, action: #selector(fetchPosts)),
+            .init(title: "Create post", style: .plain, target: self, action: #selector(createPost))
+        ]
         
-        navigationItem.rightBarButtonItem = .init(title: "Fetch posts",
-                                                  style: .plain,
-                                                  target: self,
-                                                  action: #selector(fetchPosts))
+        navigationItem.leftBarButtonItem = .init(title: "Log In", style: .plain, target: self, action: #selector(handleLogin))
+    }
+    
+    @objc fileprivate func createPost() {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        present(imagePicker, animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
-        navigationItem.leftBarButtonItem = .init(title: "Log In",
-                                                 style: .plain,
-                                                 target: self,
-                                                 action: #selector(handleLogin))
+        guard let image = info[.originalImage] as? UIImage else { return }
+        
+        dismiss(animated: true) {
+            let url = "http://localhost:1337/post"
+            AF.upload(multipartFormData: { (formData) in
+                // post text
+                formData.append(Data("Coming from iPhone Sim".utf8), withName: "postBody")
+                
+                // post image
+                guard let imageData = image.jpegData(compressionQuality: 0.5) else { return }
+                formData.append(imageData, withName: "imagefile", fileName: "doesntMatterSoMuch", mimeType: "image/jpg")
+            }, to: url).uploadProgress { (progress) in
+                print("Upload progress: \(progress.fractionCompleted)")
+            }.responseJSON { json in
+                if let err = json.error {
+                    print("Failed to hit server: ", err)
+                    return
+                }
+                
+                if let code = json.response?.statusCode, code >= 300 {
+                    print("Failed upload with status: ", code)
+                    return
+                }
+                
+                let respString = String(data: json.data ?? Data(), encoding: .utf8)
+                print("Successfully created post, here is the response:")
+                print(respString ?? "")
+                
+                self.fetchPosts()
+                
+            }
+        }
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true)
     }
     
     fileprivate func showCookies() {
@@ -52,24 +84,16 @@ class HomeController: UITableViewController {
     }
     
     @objc fileprivate func fetchPosts() {
-        let url = "http://localhost:1337/post"
-        AF.request(url)
-            .validate(statusCode: 200..<300)
-            .responseData { (dataResp) in
-                if let err = dataResp.error {
-                    print("Failed to fetch posts:", err)
-                    return
-                }
-                
-                guard let data = dataResp.data else { return }
-                do {
-                    let posts = try JSONDecoder().decode([Post].self, from: data)
-                    self.posts = posts
-                    self.tableView.reloadData()
-                } catch {
-                    print(error)
-                }
+        Service.shared.fetchPosts { (res) in
+            switch res {
+            case .failure(let err):
+                print("Failed to fetch posts:", err)
+            case .success(let posts):
+                self.posts = posts
+                self.tableView.reloadData()
             }
+        }
+        print("Maybe finished uploading")
     }
     
     var posts = [Post]()
@@ -85,8 +109,14 @@ class HomeController: UITableViewController {
         cell.textLabel?.font = .boldSystemFont(ofSize: 14)
         cell.detailTextLabel?.text = post.text
         cell.detailTextLabel?.numberOfLines = 0
+        
+        cell.imageView?.sd_setImage(with: URL(string: post.imageUrl))
+        
         return cell
     }
     
-}
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
 
+}
